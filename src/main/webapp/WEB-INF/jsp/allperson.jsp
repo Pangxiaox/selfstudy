@@ -7,7 +7,7 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/WEB-INF/jsp/taglib.jsp" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <% String appPath = request.getContextPath(); %>
 <html>
 <head>
@@ -51,7 +51,7 @@
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="${ctx}/person/allperson">主页</a></li>
                 <li><a href="${ctx}/person/toaddPerson">添加学生信息</a></li>
-                <li><a href="">iOS</a></li>
+                <li><a href="">宿舍介绍</a></li>
             </ul>
         </div>
         <div  id="main" class="col-md-8 column">
