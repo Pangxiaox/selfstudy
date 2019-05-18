@@ -33,20 +33,52 @@
     </div>
 
     <form id="form" class="bs-example bs-example-form" action="" name="userForm" role="form">
-        名字：<input id="name" class="form-control" type="text" name="name" placeholder="请输入名字" style="width:30%"
+
+        名字：
+        <input id="name" class="form-control" type="text" name="name" placeholder="请输入名字" style="width:30%"
                   onfocus="showTips('name','名字必填')"><span id="namespan"></span><br><br><br>
-        宿舍号：<input id="dorm_number" type="text" class="form-control" name="dorm_number" placeholder="请输入宿舍号" style="width:40%"
-                   onfocus="showTips('dorm_number','宿舍号必填')"><span id="dorm_numberspan"></span><br><br><br>
-        性别：<input id="sex" type="text" class="form-control" name="sex" placeholder="请输入性别" maxlength="1" style="width:20%"
-                onfocus="showTips('sex','性别必填')"
-                  onblur="checksex('sex','请输入性别（男/女)')"><span id="sexspan"></span>
+
+        宿舍楼：
+            <select id="dorm_building" name="dorm_building" class="form-control">
+                <option value="choose" selected="selected">请选择</option>
+                <option value="C1">C1</option>
+                <option value="C2">C2</option>
+                <option value="C3">C3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="C7">C7</option>
+                <option value="C8">C8</option>
+                <option value="C9">C9</option>
+                <option value="C10">C10</option>
+                <option value="C11">C11</option>
+                <option value="C12">C12</option>
+                <option value="C13">C13</option>
+                <option value="C14">C14</option>
+                <option value="C15">C15</option>
+            </select>
         <br><br><br>
-        年龄：<input id="age" class="form-control" type="text" name="age"
+
+        宿舍号：
+        <input id="dorm_number" class="form-control" type="text" name="dorm_number" placeholder="请输入宿舍号" style="width:30%">
+        <br><br><br>
+
+        性别：
+        <select id="sex" name="sex" class="form-control">
+            <option value="choose" selected="selected">请选择</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+        <br><br><br>
+
+        年龄：
+        <input id="age" class="form-control" type="text" name="age"
                   placeholder="请输入年龄" maxlength="2" style="width:20%"
                 onfocus="showTips('age','年龄必填')"
                 onblur="checkage('age','年龄须大于或等于18')"><span id="agespan"></span>
         <br><br><br>
     </form>
+
     <input type="button" class="btn btn-success" value="添加信息" onclick="addperson()">
 
     <script type="text/javascript">
@@ -75,17 +107,5 @@
             }
         }
 
-        function checksex(id,info)
-        {
-            var sex=document.getElementById(id).value;
-            if( !sex.equals("男")||!sex.equals("女") )
-            {
-                document.getElementById(id+"span").innerHTML = ""
-            }
-            else
-            {
-                document.getElementById(id+"span").innerHTML="<font color='#ffb6c1'>" + info + "</font>"
-            }
-        }
     </script>
 </div>

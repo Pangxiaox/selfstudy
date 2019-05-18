@@ -5,16 +5,17 @@
 <mapper namespace="cn.dao.PersonDao">
     <resultMap type="Person" id="personResultMap" >
         <id property="name" column="name"/>
+        <result property="dorm_building" column="dorm_building"/>
         <result property="dorm_number" column="dorm_number"/>
         <result property="age" column="age"/>
         <result property="sex" column="sex"/>
     </resultMap>
     <insert id="addperson" parameterType="Person">
-        INSERT INTO person(name,dorm_number,age,sex) VALUE (#{name},#{dorm_number}, #{age}, #{sex})
+        INSERT INTO person(name,dorm_building,dorm_number,age,sex) VALUE (#{name},#{dorm_building},#{dorm_number}, #{age}, #{sex})
     </insert>
 
     <select id="queryAll" resultMap="personResultMap">
-        SELECT name,dorm_number,age,sex
+        SELECT name,dorm_building,dorm_number,age,sex
         FROM person
     </select>
 

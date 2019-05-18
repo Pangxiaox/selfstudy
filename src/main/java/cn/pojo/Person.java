@@ -3,6 +3,7 @@ package cn.pojo;
 public class Person {
     private String name;
     private String dorm_number;
+    private String dorm_building;
     private int age;
     private String sex;
 
@@ -22,6 +23,10 @@ public class Person {
         return sex;
     }
 
+    public String getDorm_building() {
+        return dorm_building;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -36,5 +41,10 @@ public class Person {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public void setDorm_building(String dorm_building)
+    {
+        this.dorm_building=dorm_building;
     }
 }

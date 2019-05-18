@@ -59,6 +59,7 @@
                 <thead>
                 <tr class="info">
                     <th>姓名</th>
+                    <th>宿舍楼</th>
                     <th>宿舍号</th>
                     <th>性别</th>
                     <th>年龄</th>
@@ -68,6 +69,7 @@
                 <c:forEach var="person" items="${requestScope.get('list')}" varStatus="status">
                     <tr>
                         <td class="success">${person.name}</td>
+                        <td class="success">${person.dorm_building}</td>
                         <td class="success">${person.dorm_number}</td>
                         <td class="success">${person.sex}</td>
                         <td class="success">${person.age}</td>
