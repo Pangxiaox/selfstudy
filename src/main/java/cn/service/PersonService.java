@@ -9,4 +9,9 @@ public interface PersonService {
 
     List<Person> queryAll();
 
+    int deleteperson(String name);
+
+    int updateperson(Person person);//modify
+
+    Person queryByName(String name);
 }

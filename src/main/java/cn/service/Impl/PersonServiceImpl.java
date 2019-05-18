@@ -7,6 +7,8 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.jws.Oneway;
+
 @Service
 public class PersonServiceImpl implements  PersonService {
     @Autowired
@@ -21,4 +23,22 @@ public class PersonServiceImpl implements  PersonService {
     public List<Person> queryAll() {
         return persondao.queryAll();
     }
+
+    @Override
+    public int deleteperson(String name) {
+        return persondao.deleteperson(name);
+    }
+
+    @Override
+    public int updateperson(Person person)
+    {
+        return persondao.updateperson(person);
+    }
+
+    @Override
+    public Person queryByName(String name)
+    {
+        return persondao.queryByName(name);
+    }
+
 }

@@ -8,4 +8,9 @@ public interface PersonDao {
 
     List<Person> queryAll();
 
+    int deleteperson(String name);
+
+    int updateperson(Person person);//modify
+
+    Person queryByName(String name);
 }

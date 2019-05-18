@@ -63,6 +63,7 @@
                     <th>宿舍号</th>
                     <th>性别</th>
                     <th>年龄</th>
+                    <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -73,10 +74,28 @@
                         <td class="success">${person.dorm_number}</td>
                         <td class="success">${person.sex}</td>
                         <td class="success">${person.age}</td>
+                        <td class="warning" style="text-decoration: none; ">
+                            <a href="<%=appPath%>/person/toupdatePerson?name=${person.name}">修改</a>
+                            &nbsp;&nbsp;
+                            <a href="<%=appPath%>/person/del/${person.name}" onclick="return del_alert()">删除</a>
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>
             </table>
+
+            <script type="text/javascript">
+                function del_alert()
+                {
+                    if(confirm('确认需要删除这个学生的信息吗?'))
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            </script>
         </div>
     </div>
+</body>
+</html>
 

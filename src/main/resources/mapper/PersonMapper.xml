@@ -19,5 +19,20 @@
         FROM person
     </select>
 
+    <delete id="deleteperson" parameterType="String">
+        delete from person where name=#{name};
+    </delete>
+
+    <select id="queryByName" resultType="Person" parameterType="String">
+    select name,dorm_building,dorm_number,age,sex
+    from person
+    where name=#{name}
+    </select>
+
+    <update id="updateperson" parameterType="Person">
+    update person
+    set Name=#{name},DORM_BUILDING=#{dorm_building},DORM_NUMBER=#{dorm_number},AGE=#{age},SEX=#{sex}
+    where name=#{name}
+    </update>
 
 </mapper>
