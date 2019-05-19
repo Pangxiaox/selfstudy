@@ -86,7 +86,14 @@
             var form = document.forms[0];
             form.action = "<%=basePath%>person/addperson";
             form.method = "post";
+            var Age=document.getElementById("age").value;
+            if(Age<18)
+            {
+                alert('请输入正确的年龄');
+                return false;
+            }
             form.submit();
+            return true;
         }
 
         function showTips(id,info)
