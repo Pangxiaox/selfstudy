@@ -25,7 +25,6 @@
             </div>
         </div>
 
-
     <div class="row clearfix">
         <div class="col-md-12 column">
             <div class="page-header">
@@ -37,10 +36,9 @@
     </div>
 
     <form id="form" class="bs-example bs-example-form" action="" name="userForm" role="form">
-
         名字：
-        <input id="name" class="form-control" type="text" name="name" placeholder="请输入名字" style="width:30%"
-               onfocus="showTips('name','名字必填')"><span id="namespan"></span><br><br><br>
+        <input id="name" class="form-control" type="text" name="name" style="width:30%" value="${person.name}" readonly>
+        <span id="namespan"></span><br><br><br>
 
         宿舍楼：
         <select id="dorm_building" name="dorm_building" class="form-control">

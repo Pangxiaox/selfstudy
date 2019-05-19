@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <form id="form" class="bs-example bs-example-form" action="" name="userForm" role="form">
+    <form id="form" class="bs-example bs-example-form" name="userForm" role="form">
 
         名字：
         <input id="name" class="form-control" type="text" name="name" placeholder="请输入名字" style="width:30%"

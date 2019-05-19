@@ -10,6 +10,7 @@
         <result property="age" column="age"/>
         <result property="sex" column="sex"/>
     </resultMap>
+
     <insert id="addperson" parameterType="Person">
         INSERT INTO person(name,dorm_building,dorm_number,age,sex) VALUE (#{name},#{dorm_building},#{dorm_number}, #{age}, #{sex})
     </insert>
@@ -17,17 +18,18 @@
     <select id="queryAll" resultMap="personResultMap">
         SELECT name,dorm_building,dorm_number,age,sex
         FROM person
+        order by name;
+    </select>
+
+    <select id="queryByName" resultType="Person" parameterType="String">
+        select name,dorm_building,dorm_number,age,sex
+        from person
+        where name=#{name}
     </select>
 
     <delete id="deleteperson" parameterType="String">
         delete from person where name=#{name};
     </delete>
-
-    <select id="queryByName" resultType="Person" parameterType="String">
-    select name,dorm_building,dorm_number,age,sex
-    from person
-    where name=#{name}
-    </select>
 
     <update id="updateperson" parameterType="Person">
     update person
