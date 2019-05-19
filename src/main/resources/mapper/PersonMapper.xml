@@ -28,7 +28,7 @@
     </select>
 
     <delete id="deleteperson" parameterType="String">
-        delete from person where name=#{name};
+        delete from person where name=#{name}
     </delete>
 
     <update id="updateperson" parameterType="Person">

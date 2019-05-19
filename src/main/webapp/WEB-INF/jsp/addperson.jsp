@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lenovo
-  Date: 2018/4/7
-  Time: 16:45
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
@@ -39,7 +33,7 @@
                   onfocus="showTips('name','名字必填')"><span id="namespan"></span><br><br><br>
 
         宿舍楼：
-            <select id="dorm_building" name="dorm_building" class="form-control">
+            <select id="dorm_building" name="dorm_building" class="form-control" onfocus="showTips('dorm_building','宿舍楼必填')">
                 <option value="choose" selected="selected">请选择</option>
                 <option value="C1">C1</option>
                 <option value="C2">C2</option>
@@ -57,18 +51,21 @@
                 <option value="C14">C14</option>
                 <option value="C15">C15</option>
             </select>
+        <span id="dorm_buildingspan"></span>
         <br><br><br>
 
         宿舍号：
-        <input id="dorm_number" class="form-control" type="text" name="dorm_number" placeholder="请输入宿舍号" style="width:30%">
+        <input id="dorm_number" class="form-control" maxlength="3" type="text" name="dorm_number" onfocus="showTips('dorm_number','宿舍号必填')" placeholder="请输入宿舍号" style="width:30%">
+        <span id="dorm_numberspan"></span>
         <br><br><br>
 
         性别：
-        <select id="sex" name="sex" class="form-control">
+        <select id="sex" name="sex" class="form-control" onfocus="showTips('sex','性别必填')">
             <option value="choose" selected="selected">请选择</option>
             <option value="男">男</option>
             <option value="女">女</option>
         </select>
+        <span id="sexspan"></span>
         <br><br><br>
 
         年龄：
@@ -110,7 +107,7 @@
             }
             else
             {
-                document.getElementById(id + "span").innerHTML = ""
+                document.getElementById(id + "span").innerHTML = "";
             }
         }
 

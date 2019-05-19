@@ -62,7 +62,7 @@
         <br><br><br>
 
         宿舍号：
-        <input id="dorm_number" class="form-control" type="text" name="dorm_number" placeholder="请输入宿舍号" style="width:30%">
+        <input id="dorm_number" class="form-control" type="text" name="dorm_number" maxlength="3" placeholder="请输入宿舍号" style="width:30%">
         <br><br><br>
 
         性别：
@@ -82,7 +82,6 @@
 
         <input type="button" class="btn btn-success" value="更改信息" onclick="updateperson()">
     </form>
-
 
     <script type="text/javascript">
         function updateperson() {
