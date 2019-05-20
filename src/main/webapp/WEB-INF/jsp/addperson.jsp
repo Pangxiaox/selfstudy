@@ -33,7 +33,7 @@
                   onfocus="showTips('name','名字必填')"><span id="namespan"></span><br><br><br>
 
         宿舍楼：
-            <select id="dorm_building" name="dorm_building" class="form-control" onfocus="showTips('dorm_building','宿舍楼必填')">
+            <select id="dormbuilding" name="dormbuilding" class="form-control" onfocus="showTips('dormbuilding','宿舍楼必填')">
                 <option value="choose" selected="selected">请选择</option>
                 <option value="C1">C1</option>
                 <option value="C2">C2</option>
@@ -51,12 +51,12 @@
                 <option value="C14">C14</option>
                 <option value="C15">C15</option>
             </select>
-        <span id="dorm_buildingspan"></span>
+        <span id="dormbuildingspan"></span>
         <br><br><br>
 
         宿舍号：
-        <input id="dorm_number" class="form-control" maxlength="3" type="text" name="dorm_number" onfocus="showTips('dorm_number','宿舍号必填')" placeholder="请输入宿舍号" style="width:30%">
-        <span id="dorm_numberspan"></span>
+        <input id="dormnumber" class="form-control" maxlength="3" type="text" name="dormnumber" onfocus="showTips('dormnumber','宿舍号必填')" placeholder="请输入宿舍号" style="width:30%">
+        <span id="dormnumberspan"></span>
         <br><br><br>
 
         性别：

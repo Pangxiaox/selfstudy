@@ -33,16 +33,16 @@ public class PaperController {
         return "addperson";
     }
 
-    @RequestMapping("/del/{name}")
-    public String deleteperson(@PathVariable("name") String name) {
-        personservice.deleteperson(name);
+    @RequestMapping("/del/{name},{dormnumber}")
+    public String deleteperson(@PathVariable("name") String name,@PathVariable("dormnumber")String dormnumber) {
+        personservice.deleteperson(name,dormnumber);
         return "redirect:/person/allperson";
     }
 
-    @RequestMapping("/toupdatePerson")
-    public String toupdateperson(Model model,String name)
+    @RequestMapping("/toupdatePerson/{name},{dormnumber}")
+    public String toupdateperson(Model model,@PathVariable("name") String name,@PathVariable("dormnumber") String dormnumber)
     {
-        model.addAttribute("person",personservice.queryByName(name));
+        model.addAttribute("person",personservice.queryByNameAndDormNumber(name,dormnumber));
         return "updateperson";
     }
 
@@ -50,7 +50,7 @@ public class PaperController {
     public String updateperson(Model model,Person person)
     {
         personservice.updateperson(person);
-        person=personservice.queryByName(person.getName());
+        person=personservice.queryByNameAndDormNumber(person.getName(),person.getDormnumber());
         model.addAttribute("person",person);
         return "redirect:/person/allperson";
     }

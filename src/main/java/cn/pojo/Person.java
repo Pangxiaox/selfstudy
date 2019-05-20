@@ -2,8 +2,8 @@ package cn.pojo;
 
 public class Person {
     private String name;
-    private String dorm_number;
-    private String dorm_building;
+    private String dormbuilding;
+    private String dormnumber;
     private int age;
     private String sex;
 
@@ -11,9 +11,7 @@ public class Person {
         return name;
     }
 
-    public String getDorm_number() {
-        return dorm_number;
-    }
+   public String getDormbuilding(){return dormbuilding;}
 
     public int getAge() {
         return age;
@@ -23,17 +21,13 @@ public class Person {
         return sex;
     }
 
-    public String getDorm_building() {
-        return dorm_building;
-    }
+   public String getDormnumber(){return dormnumber;}
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setDorm_number(String dorm_number) {
-        this.dorm_number = dorm_number;
-    }
+    public void setDormnumber(String dormnumber){this.dormnumber=dormnumber;}
 
     public void setAge(int age) {
         this.age = age;
@@ -43,8 +37,6 @@ public class Person {
         this.sex = sex;
     }
 
-    public void setDorm_building(String dorm_building)
-    {
-        this.dorm_building=dorm_building;
-    }
+    public void setDormbuilding(String dormbuilding){this.dormbuilding=dormbuilding;}
 }
+

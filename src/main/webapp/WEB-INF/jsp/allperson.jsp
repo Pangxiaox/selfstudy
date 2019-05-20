@@ -64,14 +64,14 @@
                 <c:forEach var="person" items="${requestScope.get('list')}" varStatus="status">
                     <tr>
                         <td class="success">${person.name}</td>
-                        <td class="success">${person.dorm_building}</td>
-                        <td class="success">${person.dorm_number}</td>
+                        <td class="success">${person.dormbuilding}</td>
+                        <td class="success">${person.dormnumber}</td>
                         <td class="success">${person.sex}</td>
                         <td class="success">${person.age}</td>
                         <td class="warning" style="text-decoration: none; ">
-                            <a href="<%=appPath%>/person/toupdatePerson?name=${person.name}">修改</a>
+                            <a href="<%=appPath%>/person/toupdatePerson/${person.name},${person.dormnumber}">修改</a>
                             &nbsp;&nbsp;
-                            <a href="<%=appPath%>/person/del/${person.name}" onclick="return del_alert()">删除</a>
+                            <a href="<%=appPath%>/person/del/${person.name},${person.dormnumber}" onclick="return del_alert()">删除</a>
                         </td>
                     </tr>
                 </c:forEach>

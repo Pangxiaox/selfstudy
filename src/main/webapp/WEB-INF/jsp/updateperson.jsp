@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://"
@@ -38,10 +39,10 @@
     <form id="form" class="bs-example bs-example-form" action="" name="userForm" role="form">
         名字：
         <input id="name" class="form-control" type="text" name="name" style="width:30%" value="${person.name}" readonly>
-        <span id="namespan"></span><br><br><br>
+        <br><br><br>
 
         宿舍楼：
-        <select id="dorm_building" name="dorm_building" class="form-control">
+        <select id="dormbuilding" name="dormbuilding" class="form-control">
             <option value="choose" selected="selected">请选择</option>
             <option value="C1">C1</option>
             <option value="C2">C2</option>
@@ -62,7 +63,7 @@
         <br><br><br>
 
         宿舍号：
-        <input id="dorm_number" class="form-control" type="text" name="dorm_number" maxlength="3" placeholder="请输入宿舍号" style="width:30%">
+        <input id="dormnumber" class="form-control" type="text" name="dormnumber" style="width:30%" value="${person.dormnumber}" readonly>
         <br><br><br>
 
         性别：
@@ -86,7 +87,7 @@
     <script type="text/javascript">
         function updateperson() {
             var form = document.forms[0];
-            form.action = "<%=basePath %>person/updateperson";
+            form.action = "<%=basePath%>person/updateperson";
             form.method = "post";
             var Age=document.getElementById("age").value;
             if(Age<18)

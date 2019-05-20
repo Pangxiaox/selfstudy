@@ -25,8 +25,8 @@ public class PersonServiceImpl implements  PersonService {
     }
 
     @Override
-    public int deleteperson(String name) {
-        return persondao.deleteperson(name);
+    public int deleteperson(String name,String dormnumber) {
+        return persondao.deleteperson(name,dormnumber);
     }
 
     @Override
@@ -36,9 +36,9 @@ public class PersonServiceImpl implements  PersonService {
     }
 
     @Override
-    public Person queryByName(String name)
+    public Person queryByNameAndDormNumber(String name,String dormnumber)
     {
-        return persondao.queryByName(name);
+        return persondao.queryByNameAndDormNumber(name,dormnumber);
     }
 
 }

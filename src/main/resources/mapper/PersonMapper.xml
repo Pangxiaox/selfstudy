@@ -5,36 +5,36 @@
 <mapper namespace="cn.dao.PersonDao">
     <resultMap type="Person" id="personResultMap" >
         <id property="name" column="name"/>
-        <result property="dorm_building" column="dorm_building"/>
-        <result property="dorm_number" column="dorm_number"/>
+        <result property="dormbuilding" column="dormbuilding"/>
+        <result property="dormnumber" column="dormnumber"/>
         <result property="age" column="age"/>
         <result property="sex" column="sex"/>
     </resultMap>
 
     <insert id="addperson" parameterType="Person">
-        INSERT INTO person(name,dorm_building,dorm_number,age,sex) VALUE (#{name},#{dorm_building},#{dorm_number}, #{age}, #{sex})
+        INSERT INTO person(name,dormbuilding,dormnumber,age,sex) VALUE (#{name},#{dormbuilding},#{dormnumber}, #{age}, #{sex})
     </insert>
 
     <select id="queryAll" resultMap="personResultMap">
-        SELECT name,dorm_building,dorm_number,age,sex
+        SELECT name,dormbuilding,dormnumber,age,sex
         FROM person
         order by name;
     </select>
 
-    <select id="queryByName" resultType="Person" parameterType="String">
-        select name,dorm_building,dorm_number,age,sex
+    <select id="queryByNameAndDormNumber" resultType="Person">
+        select name,dormbuilding,dormnumber,age,sex
         from person
-        where name=#{name}
+        where name=#{name} and dormnumber=#{dormnumber}
     </select>
 
-    <delete id="deleteperson" parameterType="String">
-        delete from person where name=#{name}
+    <delete id="deleteperson">
+        delete from person where name=#{name} and dormnumber=#{dormnumber}
     </delete>
 
-    <update id="updateperson" parameterType="Person">
+    <update id="updateperson">
     update person
-    set Name=#{name},DORM_BUILDING=#{dorm_building},DORM_NUMBER=#{dorm_number},AGE=#{age},SEX=#{sex}
-    where name=#{name}
+    set DORMBUILDING=#{dormbuilding},AGE=#{age},SEX=#{sex}
+    where name=#{name} and dormnumber=#{dormnumber}
     </update>
 
 </mapper>
