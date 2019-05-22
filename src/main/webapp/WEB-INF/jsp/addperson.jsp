@@ -33,7 +33,8 @@
                   onfocus="showTips('name','名字必填')"><span id="namespan"></span><br><br><br>
 
         宿舍楼：
-            <select id="dormbuilding" name="dormbuilding" class="form-control" onfocus="showTips('dormbuilding','宿舍楼必填')">
+            <select id="dormbuilding" name="dormbuilding" class="form-control"
+                    onfocus="showTips('dormbuilding','宿舍楼必填')">
                 <option value="choose" selected="selected">请选择</option>
                 <option value="C1">C1</option>
                 <option value="C2">C2</option>
@@ -55,7 +56,8 @@
         <br><br><br>
 
         宿舍号：
-        <input id="dormnumber" class="form-control" maxlength="3" type="text" name="dormnumber" onfocus="showTips('dormnumber','宿舍号必填')" placeholder="请输入宿舍号" style="width:30%">
+        <input id="dormnumber" class="form-control" maxlength="3" type="text" name="dormnumber"
+               onblur="checkdormnumber('dormnumber','请输入正确的宿舍号')" onfocus="showTips('dormnumber','宿舍号必填')" placeholder="请输入宿舍号" style="width:30%">
         <span id="dormnumberspan"></span>
         <br><br><br>
 
@@ -71,8 +73,8 @@
         年龄：
         <input id="age" class="form-control" type="text" name="age"
                   placeholder="请输入年龄" maxlength="2" style="width:20%"
-                onfocus="showTips('age','年龄必填')"
-                onblur="checkage('age','年龄须大于或等于18')"><span id="agespan"></span>
+                 onblur="checkage('age','年龄须大于或等于18')" onfocus="showTips('age','年龄必填')"
+               ><span id="agespan"></span>
         <br><br><br>
     </form>
 
@@ -87,6 +89,13 @@
             if(Age<18)
             {
                 alert('请输入正确的年龄');
+                return false;
+            }
+            var DormNumber=document.getElementById('dormnumber').value;
+            var pattern=/^(0|[1-9][0-9]*){3}$/;//正则表达式待改（首位0，定长3）
+            if(!DormNumber.match(pattern))
+            {
+                alert('请输入正确的宿舍号');
                 return false;
             }
             form.submit();
@@ -108,6 +117,19 @@
             else
             {
                 document.getElementById(id + "span").innerHTML = "";
+            }
+        }
+
+        function checkdormnumber(id,info)
+        {
+            var DormNumber=document.getElementById("dormnumber").value;
+            var pattern=/^(0|[1-9][0-9]*){3}$/;//更改正则表达式匹配正确宿舍号(第一位不为0，长度定长3）
+            {
+                if (!DormNumber.match(pattern)) {
+                    document.getElementById(id + "span").innerHTML = "<font color='red'>" + info + "</font>";
+                } else {
+                    document.getElementById(id + "span").innerHTML = "";
+                }
             }
         }
 
