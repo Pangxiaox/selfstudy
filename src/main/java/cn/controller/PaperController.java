@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/person")
@@ -20,6 +21,22 @@ public class PaperController {
         List<Person> list = personservice.queryAll();
         model.addAttribute("list", list);
         return "allperson";
+    }
+
+    @RequestMapping("/queryAge")
+    public String list2( String age,Model model)
+    {
+        List<Person> list2=personservice.queryAge(age);
+        model.addAttribute("list2",list2);
+        return "searchperson";
+    }
+
+    @RequestMapping("/queryDormBuilding")
+    public String list3(String dormbuilding,Model model)
+    {
+        List<Person> list3=personservice.queryDormBuilding(dormbuilding);
+        model.addAttribute("list3",list3);
+        return "searchperson";
     }
 
     @RequestMapping("/addperson")

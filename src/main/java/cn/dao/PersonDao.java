@@ -10,6 +10,10 @@ public interface PersonDao {
 
     List<Person> queryAll();
 
+    List<Person> queryAge(@Param("age")String age);
+
+    List<Person> queryDormBuilding(@Param("dormbuilding")String dormbuilding);
+
     int deleteperson(@Param("name") String name, @Param("dormnumber") String dormnumber);
     //对于同名的人的修改异常的解决关键点
 

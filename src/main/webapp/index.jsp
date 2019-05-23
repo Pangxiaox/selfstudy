@@ -15,7 +15,7 @@
         }
 
         h3 {
-            width: 180px;
+            width: 150px;
             height: 38px;
             margin: 100px auto;
             text-align: center;
@@ -40,7 +40,7 @@
 </div>
 <br><br>
 <h3>
-    <a href="${path}/person/allperson">点击进入页面</a>
+    <a href="${path}/person/allperson" style="text-decoration: none;">点击进入页面</a>
 </h3>
 
 </body>

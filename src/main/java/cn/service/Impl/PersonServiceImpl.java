@@ -30,6 +30,12 @@ public class PersonServiceImpl implements  PersonService {
     }
 
     @Override
+    public List<Person> queryAge(String age){return persondao.queryAge(age);}
+
+    @Override
+    public List<Person> queryDormBuilding(String dormbuilding){return persondao.queryDormBuilding(dormbuilding);}
+
+    @Override
     public int updateperson(Person person)
     {
         return persondao.updateperson(person);

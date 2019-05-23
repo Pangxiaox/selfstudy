@@ -37,4 +37,15 @@
     where name=#{name} and dormnumber=#{dormnumber}
     </update>
 
+    <select id="queryAge" resultMap="personResultMap" parameterType="String">
+        select name,dormbuilding,dormnumber,age,sex
+        from person
+        where age=#{age};
+    </select>
+
+    <select id="queryDormBuilding" resultMap="personResultMap" parameterType="String">
+        select name,dormbuilding,dormnumber,age,sex
+        from person
+        where dormbuilding=#{dormbuilding};
+    </select>
 </mapper>

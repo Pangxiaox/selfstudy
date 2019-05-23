@@ -45,9 +45,10 @@
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="${ctx}/person/allperson">主页</a></li>
                 <li><a href="${ctx}/person/toaddPerson">添加学生信息</a></li>
-                <li><a href="${ctx}/person/searchperson">查询学生信息</a></li>
+                <li><a href="${ctx}/person/queryAge">查询学生信息</a></li>
             </ul>
         </div>
+
         <div  id="main" class="col-md-8 column">
             <table class="table table-hover table-bordered">
                 <thead>
