@@ -39,6 +39,29 @@ public class PaperController {
         return "searchperson";
     }
 
+    @RequestMapping("/querySex")
+    public String list4(String sex,Model model)
+    {
+        List<Person> list4=personservice.querySex(sex);
+        model.addAttribute("list4",list4);
+        return "searchperson";
+    }
+
+    @RequestMapping("/queryDormNumber")
+    public String list5(String dormnumber,Model model)
+    {
+        List<Person> list5=personservice.queryDormNumber(dormnumber);
+        model.addAttribute("list5",list5);
+        return "searchperson";
+    }
+
+    @RequestMapping("/queryName")
+    public String list6(String name,Model model) {
+        List<Person> list6 = personservice.queryName(name);
+        model.addAttribute("list6", list6);
+        return "searchperson";
+    }
+
     @RequestMapping("/addperson")
     public String addperson(Person person) {
         personservice.addperson(person);

@@ -13,19 +13,19 @@
             color: lightcoral;
             font-size: 18px;
         }
-
         h3 {
-            width: 150px;
-            height: 38px;
+            width: 140px;
+            height: 36px;
             margin: 100px auto;
             text-align: center;
             line-height: 38px;
-            background: lightseagreen;
-            border-radius: 4px;
+            background: lightgrey;
+            border-radius: 6px;
         }
     </style>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 <div class="container">
     <div class="row clearfix">
@@ -37,11 +37,10 @@
             </div>
         </div>
     </div>
-</div>
 <br><br>
 <h3>
-    <a href="${path}/person/allperson" style="text-decoration: none;">点击进入页面</a>
+    <a href="${path}/person/allperson" style="text-decoration: none;">点击进入主页</a>
 </h3>
-
+</div>
 </body>
 </html>

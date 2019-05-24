@@ -33,6 +33,15 @@ public class PersonServiceImpl implements  PersonService {
     public List<Person> queryAge(String age){return persondao.queryAge(age);}
 
     @Override
+    public List<Person> querySex(String sex){return persondao.querySex(sex);}
+
+    @Override
+    public List<Person> queryDormNumber(String dormnumber){return persondao.queryDormNumber(dormnumber);}
+
+    @Override
+    public List<Person> queryName(String name){return persondao.queryName(name);}
+
+    @Override
     public List<Person> queryDormBuilding(String dormbuilding){return persondao.queryDormBuilding(dormbuilding);}
 
     @Override

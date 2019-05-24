@@ -70,9 +70,9 @@
                         <td class="success">${person.sex}</td>
                         <td class="success">${person.age}</td>
                         <td class="warning" style="text-decoration: none; ">
-                            <a href="<%=appPath%>/person/toupdatePerson/${person.name},${person.dormnumber}">修改</a>
+                            <a href="<%=appPath%>/person/toupdatePerson/${person.name},${person.dormnumber}" style="text-decoration: none">修改</a>
                             &nbsp;&nbsp;
-                            <a href="<%=appPath%>/person/del/${person.name},${person.dormnumber}" onclick="return del_alert()">删除</a>
+                            <a href="<%=appPath%>/person/del/${person.name},${person.dormnumber}" onclick="return del_alert()" style="text-decoration: none">删除</a>
                         </td>
                     </tr>
                 </c:forEach>

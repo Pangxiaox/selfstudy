@@ -40,12 +40,34 @@
     <select id="queryAge" resultMap="personResultMap" parameterType="String">
         select name,dormbuilding,dormnumber,age,sex
         from person
-        where age=#{age};
+        where age=#{age}
+        ORDER BY name;
+    </select>
+
+    <select id="querySex" resultMap="personResultMap" parameterType="String">
+        select name,dormbuilding,dormnumber,age,sex
+        from person
+        where sex=#{sex}
+        order by name;
+    </select>
+
+    <select id="queryDormNumber" resultMap="personResultMap" parameterType="String">
+        select name,dormbuilding,dormnumber,age,sex
+        from person
+        where dormnumber=#{dormnumber}
+        order by name;
     </select>
 
     <select id="queryDormBuilding" resultMap="personResultMap" parameterType="String">
         select name,dormbuilding,dormnumber,age,sex
         from person
-        where dormbuilding=#{dormbuilding};
+        where dormbuilding=#{dormbuilding}
+        order by name;
+    </select>
+
+    <select id="queryName" resultMap="personResultMap" parameterType="String">
+        select name,dormbuilding,dormnumber,age,sex
+        from person
+        where name =#{name}
     </select>
 </mapper>

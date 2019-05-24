@@ -12,6 +12,12 @@ public interface PersonService {
 
     List<Person> queryAge(String age);
 
+    List<Person> querySex(String sex);
+
+    List<Person> queryDormNumber(String dormnumber);
+
+    List<Person> queryName(String name);
+
     List<Person> queryDormBuilding(String dormbuilding);
 
     int deleteperson(String name,String dormnumber);

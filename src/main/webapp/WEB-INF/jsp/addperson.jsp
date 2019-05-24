@@ -7,13 +7,22 @@
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
     <title>新增住宿学生信息</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 引入 Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        #back{
+            font-size: 16px;
+            text-decoration: none;
+            color: lightcoral;
+        }
+    </style>
 </head>
+
 <body>
 <div class="container">
     <div class="row clearfix">
@@ -22,6 +31,14 @@
                 <h1>
                     A校-校园宿舍管理平台
                 </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <a href="${ctx}/person/allperson" id="back">回到主页</a>
             </div>
         </div>
     </div>
@@ -92,7 +109,7 @@
                 return false;
             }
             var DormNumber=document.getElementById('dormnumber').value;
-            var pattern=/^(0|[1-9][0-9]*){3}$/;//正则表达式待改（首位0，定长3）
+            var pattern=/^([1-9]\d{2})$/;//正则表达式待改（首位0，定长3）
             if(!DormNumber.match(pattern))
             {
                 alert('请输入正确的宿舍号');
@@ -123,14 +140,12 @@
         function checkdormnumber(id,info)
         {
             var DormNumber=document.getElementById("dormnumber").value;
-            var pattern=/^(0|[1-9][0-9]*){3}$/;//更改正则表达式匹配正确宿舍号(第一位不为0，长度定长3）
-            {
+            var pattern=/^([1-9]\d{2})$/;//更改正则表达式匹配正确宿舍号(第一位不为0，长度定长3）
                 if (!DormNumber.match(pattern)) {
                     document.getElementById(id + "span").innerHTML = "<font color='red'>" + info + "</font>";
                 } else {
                     document.getElementById(id + "span").innerHTML = "";
                 }
-            }
         }
 
     </script>

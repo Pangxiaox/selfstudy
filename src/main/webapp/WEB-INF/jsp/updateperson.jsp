@@ -7,12 +7,20 @@
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
     <title>修改论文</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 引入 Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        #back{
+            font-size: 16px;
+            text-decoration: none;
+            color: lightcoral;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -29,9 +37,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <div class="page-header">
-                <h1>
-                    <small>更改学生住宿信息</small>
-                </h1>
+                <a href="${ctx}/person/allperson" id="back">回到主页</a>
             </div>
         </div>
     </div>
