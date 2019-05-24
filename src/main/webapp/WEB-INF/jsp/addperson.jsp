@@ -90,8 +90,7 @@
         年龄：
         <input id="age" class="form-control" type="text" name="age"
                   placeholder="请输入年龄" maxlength="2" style="width:20%"
-                 onblur="checkage('age','年龄须大于或等于18')" onfocus="showTips('age','年龄必填')"
-               ><span id="agespan"></span>
+                 onblur="checkage('age','年龄须大于或等于18')" onfocus="showTips('age','年龄必填')"><span id="agespan"></span>
         <br><br><br>
     </form>
 

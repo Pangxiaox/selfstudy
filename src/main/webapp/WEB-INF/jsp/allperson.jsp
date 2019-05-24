@@ -38,9 +38,6 @@
             </div>
         </div>
     </div>
-    <!--/>
-    <div class="row clearfix">
-    <!-->
         <div id="nav">
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="${ctx}/person/allperson">主页</a></li>

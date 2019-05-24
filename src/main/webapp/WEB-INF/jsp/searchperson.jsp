@@ -21,7 +21,7 @@
         }
         #nav{
             float:left;
-            width:200px;
+            width:350px;
         }
         #back{
             font-size: 16px;
@@ -55,28 +55,49 @@
     <form class="form-inline" action="<%=basePath%>/person/queryAge" method="post" >
         <div class="form-group">
             <label>年龄：</label>
-            <input type="text" class="form-control" name="age">
+            <input type="text" class="form-control" name="age" maxlength="2">
         </div>
         <input type="submit" value="查询" class="form-control btn btn-info"/>
     </form>
     <form class="form-inline" action="<%=basePath%>/person/queryDormBuilding" method="post" >
         <div class="form-group">
             <label>宿舍楼：</label>
-            <input type="text" class="form-control" name="dormbuilding"/>
+            <select id="dormbuilding" name="dormbuilding" class="form-control">
+                <option value="choose" selected="selected">请选择</option>
+                <option value="C1">C1</option>
+                <option value="C2">C2</option>
+                <option value="C3">C3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="C7">C7</option>
+                <option value="C8">C8</option>
+                <option value="C9">C9</option>
+                <option value="C10">C10</option>
+                <option value="C11">C11</option>
+                <option value="C12">C12</option>
+                <option value="C13">C13</option>
+                <option value="C14">C14</option>
+                <option value="C15">C15</option>
+            </select>
         </div>
         <input type="submit" value="查询" class="form-control btn btn-info"/>
     </form>
         <form class="form-inline" action="<%=basePath%>/person/queryDormNumber" method="post" >
             <div class="form-group">
                 <label>宿舍号：</label>
-                <input type="text" class="form-control" name="dormnumber"/>
+                <input type="text" class="form-control" name="dormnumber" maxlength="3">
             </div>
             <input type="submit" value="查询" class="form-control btn btn-info"/>
         </form>
         <form class="form-inline" action="<%=basePath%>/person/querySex" method="post" >
             <div class="form-group">
                 <label>性别：</label>
-                <input type="text" class="form-control" name="sex"/>
+                <select id="sex" name="sex" class="form-control">
+                    <option value="choose" selected="selected">请选择</option>
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
             </div>
             <input type="submit" value="查询" class="form-control btn btn-info"/>
         </form>

@@ -68,6 +68,6 @@
     <select id="queryName" resultMap="personResultMap" parameterType="String">
         select name,dormbuilding,dormnumber,age,sex
         from person
-        where name =#{name}
+        where name like concat(concat('%',#{name}),'%')
     </select>
 </mapper>
