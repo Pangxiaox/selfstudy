@@ -20,6 +20,10 @@
             text-decoration: none;
             color: lightcoral;
         }
+        #btn{
+            display:block;
+            margin:0 auto;
+        }
     </style>
 </head>
 <body>
@@ -86,11 +90,11 @@
                onfocus="showTips('age','年龄必填')"
                onblur="checkage('age','年龄须大于或等于18')"><span id="agespan"></span>
         <br><br><br>
-
-        <input type="button" class="btn btn-success" value="更改信息" onclick="updateperson()">
     </form>
+        <input id="btn" type="button" class="btn btn-success" value="更改信息" onclick="updateperson()">
+        <br><br>
 
-    <script type="text/javascript">
+        <script type="text/javascript">
         function updateperson() {
             var form = document.forms[0];
             form.action = "<%=basePath%>person/updateperson";

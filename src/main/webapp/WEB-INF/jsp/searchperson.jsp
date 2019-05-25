@@ -19,18 +19,28 @@
         #main{
             float:right;
         }
-        #nav{
-            float:left;
-            width:350px;
-        }
         #back{
             font-size: 16px;
             text-decoration: none;
             color: lightcoral;
         }
-
+        #nav{
+            float:left;
+            width:350px;
+        }
+        #title{
+            text-align:center;
+            font-size:18px;
+        }
+        .success{
+            text-align:center;
+        }
+        .thtitle{
+            text-align:center;
+        }
     </style>
 </head>
+
 <body>
 <div class="container">
     <div class="row clearfix">
@@ -52,13 +62,15 @@
 </div>
 
     <div id="nav">
+        <p id="title">单一条件查询</p>
     <form class="form-inline" action="<%=basePath%>/person/queryAge" method="post" >
         <div class="form-group">
             <label>年龄：</label>
             <input type="text" class="form-control" name="age" maxlength="2">
         </div>
         <input type="submit" value="查询" class="form-control btn btn-info"/>
-    </form>
+        </form>
+        <br>
     <form class="form-inline" action="<%=basePath%>/person/queryDormBuilding" method="post" >
         <div class="form-group">
             <label>宿舍楼：</label>
@@ -83,6 +95,7 @@
         </div>
         <input type="submit" value="查询" class="form-control btn btn-info"/>
     </form>
+        <br>
         <form class="form-inline" action="<%=basePath%>/person/queryDormNumber" method="post" >
             <div class="form-group">
                 <label>宿舍号：</label>
@@ -90,6 +103,7 @@
             </div>
             <input type="submit" value="查询" class="form-control btn btn-info"/>
         </form>
+        <br>
         <form class="form-inline" action="<%=basePath%>/person/querySex" method="post" >
             <div class="form-group">
                 <label>性别：</label>
@@ -101,6 +115,7 @@
             </div>
             <input type="submit" value="查询" class="form-control btn btn-info"/>
         </form>
+        <br>
         <form class="form-inline" action="<%=basePath%>/person/queryName" method="post" >
             <div class="form-group">
                 <label>姓名：</label>
@@ -114,11 +129,11 @@
     <table class="table table-hover table-bordered">
         <thead>
         <tr class="info">
-            <th>姓名</th>
-            <th>宿舍楼</th>
-            <th>宿舍号</th>
-            <th>性别</th>
-            <th>年龄</th>
+            <th class="thtitle">姓名</th>
+            <th class="thtitle">宿舍楼</th>
+            <th class="thtitle">宿舍号</th>
+            <th class="thtitle">性别</th>
+            <th class="thtitle">年龄</th>
         </tr>
         </thead>
         <tbody>

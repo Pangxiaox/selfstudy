@@ -20,6 +20,10 @@
             text-decoration: none;
             color: lightcoral;
         }
+        #btn{
+            display:block;
+            margin:0 auto;
+        }
     </style>
 </head>
 
@@ -94,7 +98,8 @@
         <br><br><br>
     </form>
 
-    <input type="button" class="btn btn-success" value="添加信息" onclick="addperson()">
+    <input id="btn" type="button" class="btn btn-success" value="添加信息" onclick="addperson()">
+    <br><br>
 
     <script type="text/javascript">
         function addperson() {

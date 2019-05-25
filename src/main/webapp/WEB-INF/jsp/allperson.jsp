@@ -17,7 +17,20 @@
             float:left;
             width:200px;
         }
-
+        #back{
+            font-size: 16px;
+            text-decoration: none;
+            color: lightcoral;
+        }
+        #tdtag{
+            text-align:center;
+        }
+        .thtitle{
+            text-align:center;
+        }
+        .success{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -35,6 +48,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <div class="page-header">
+                <a href="${ctx}/index.jsp" id="back">回到进入页面</a>
             </div>
         </div>
     </div>
@@ -50,12 +64,12 @@
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="info">
-                    <th>姓名</th>
-                    <th>宿舍楼</th>
-                    <th>宿舍号</th>
-                    <th>性别</th>
-                    <th>年龄</th>
-                    <th>操作</th>
+                    <th class="thtitle">姓名</th>
+                    <th class="thtitle">宿舍楼</th>
+                    <th class="thtitle">宿舍号</th>
+                    <th class="thtitle">性别</th>
+                    <th class="thtitle">年龄</th>
+                    <th class="thtitle">操作</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -66,7 +80,7 @@
                         <td class="success">${person.dormnumber}</td>
                         <td class="success">${person.sex}</td>
                         <td class="success">${person.age}</td>
-                        <td class="warning" style="text-decoration: none; ">
+                        <td id="tdtag" class="active" style="text-decoration: none; ">
                             <a href="<%=appPath%>/person/toupdatePerson/${person.name},${person.dormnumber}" style="text-decoration: none">修改</a>
                             &nbsp;&nbsp;
                             <a href="<%=appPath%>/person/del/${person.name},${person.dormnumber}" onclick="return del_alert()" style="text-decoration: none">删除</a>
