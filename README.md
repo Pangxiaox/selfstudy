@@ -3,4 +3,4 @@
 第一次自己做的一个极小型ssm框架项目
 
 ##### 登录主页（后期加登录功能）
-![] (screenshot/shot5.PNG)
+![] (https://github.com/Pangxiaox/selfstudy/blob/master/src/screenshot/shot5.PNG)
